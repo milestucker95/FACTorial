@@ -37,9 +37,9 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func quitButtonPressed(sender: UIButton) {
+    @IBAction func quitButtonPressed(_ sender: UIButton) {
         if pressed%2==0 {
-            synth.pauseSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+            synth.pauseSpeaking(at: AVSpeechBoundary.immediate)
         }
             
         else{
@@ -49,19 +49,19 @@ class FirstViewController: UIViewController {
         pressed+=1
     }
     //Math
-    @IBAction func textToSpeech(sender: UIButton) {
+    @IBAction func textToSpeech(_ sender: UIButton) {
         myUtterance = AVSpeechUtterance(string: Topics[0])
         myUtterance.rate = 0.5
-        synth.speakUtterance(myUtterance)
+        synth.speak(myUtterance)
         var i = 0
         repeat {
             myUtterance = AVSpeechUtterance(string: mathQuestions[i])
             myUtterance.rate = 0.5
-            synth.speakUtterance(myUtterance)
+            synth.speak(myUtterance)
             myUtterance.postUtteranceDelay = 2
             myUtterance = AVSpeechUtterance(string: mathAnswers[i])
             myUtterance.rate = 0.5
-            synth.speakUtterance(myUtterance)
+            synth.speak(myUtterance)
             myUtterance.postUtteranceDelay = 2
             i = i + 1
         } while i < 3
@@ -70,37 +70,37 @@ class FirstViewController: UIViewController {
         
     }
     //Sports Function
-    @IBAction func textToSpeechHistory(sender: AnyObject) {
+    @IBAction func textToSpeechHistory(_ sender: AnyObject) {
         myUtterance = AVSpeechUtterance(string: Topics[2])
         myUtterance.rate = 0.5
-        synth.speakUtterance(myUtterance)
+        synth.speak(myUtterance)
         var i = 0
         repeat {
             myUtterance = AVSpeechUtterance(string: SportsQuestions[i])
             myUtterance.rate = 0.5
-            synth.speakUtterance(myUtterance)
+            synth.speak(myUtterance)
             myUtterance.postUtteranceDelay = 2
             myUtterance = AVSpeechUtterance(string: SportsAnswers[i])
             myUtterance.rate = 0.5
-            synth.speakUtterance(myUtterance)
+            synth.speak(myUtterance)
             myUtterance.postUtteranceDelay = 2
             i = i + 1
         } while i < 3
     }
 
-    @IBAction func textToSpeechScience(sender: AnyObject) {
+    @IBAction func textToSpeechScience(_ sender: AnyObject) {
         myUtterance = AVSpeechUtterance(string: Topics[1])
         myUtterance.rate = 0.5
-        synth.speakUtterance(myUtterance)
+        synth.speak(myUtterance)
         var i = 0
         repeat {
             myUtterance = AVSpeechUtterance(string: scienceQuestions[i])
             myUtterance.rate = 0.5
-            synth.speakUtterance(myUtterance)
+            synth.speak(myUtterance)
             myUtterance.postUtteranceDelay = 2
             myUtterance = AVSpeechUtterance(string: scienceAnswers[i])
             myUtterance.rate = 0.5
-            synth.speakUtterance(myUtterance)
+            synth.speak(myUtterance)
             myUtterance.postUtteranceDelay = 2
             i = i + 1
         } while i < 3

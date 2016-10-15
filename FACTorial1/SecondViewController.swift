@@ -36,37 +36,37 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func textToSpeechMath(sender: UIButton) {
+    @IBAction func textToSpeechMath(_ sender: UIButton) {
         myUtterance = AVSpeechUtterance(string: Topics[0])
         myUtterance.rate = 0.5
-        synth.speakUtterance(myUtterance)
+        synth.speak(myUtterance)
         for fact in mathFacts{
      
         myUtterance = AVSpeechUtterance(string: fact)
         myUtterance.rate = 0.5
-        synth.speakUtterance(myUtterance)
+        synth.speak(myUtterance)
         myUtterance.postUtteranceDelay = 2
         }
 
 }
     
-    @IBAction func textToSpeechScience(sender: UIButton) {
+    @IBAction func textToSpeechScience(_ sender: UIButton) {
         myUtterance = AVSpeechUtterance(string: Topics[1])
         myUtterance.rate = 0.5
-        synth.speakUtterance(myUtterance)
+        synth.speak(myUtterance)
         for fact in scienceFacts{
             
             myUtterance = AVSpeechUtterance(string: fact)
             myUtterance.rate = 0.5
-            synth.speakUtterance(myUtterance)
+            synth.speak(myUtterance)
             myUtterance.postUtteranceDelay = 2
         }
     }
 
-    @IBAction func quitButtonPressed(sender: UIButton) {
+    @IBAction func quitButtonPressed(_ sender: UIButton) {
         
         if pressed%2==1 {
-            synth.pauseSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+            synth.pauseSpeaking(at: AVSpeechBoundary.immediate)
         }
         
         else{
@@ -78,15 +78,15 @@ class SecondViewController: UIViewController {
         
         //synth.continueSpeaking()
     }
-    @IBAction func textToSpeechSports(sender: UIButton) {
+    @IBAction func textToSpeechSports(_ sender: UIButton) {
         myUtterance = AVSpeechUtterance(string: Topics[2])
         myUtterance.rate = 0.5
-        synth.speakUtterance(myUtterance)
+        synth.speak(myUtterance)
         for fact in SportsFacts{
             
             myUtterance = AVSpeechUtterance(string: fact)
             myUtterance.rate = 0.5
-            synth.speakUtterance(myUtterance)
+            synth.speak(myUtterance)
             myUtterance.postUtteranceDelay = 2
     }
 }

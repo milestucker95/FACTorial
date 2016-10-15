@@ -103,7 +103,8 @@
 				TargetAttributes = {
 					FFC074841DAC9771008EB5EB = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 99TA55KY42;
+						DevelopmentTeam = GQAZDL7LUQ;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -258,11 +259,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GQAZDL7LUQ;
 				INFOPLIST_FILE = FACTorial1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Miles-tucker.FACTorial1";
+				PRODUCT_BUNDLE_IDENTIFIER = jamosa.FACTorial1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -271,11 +274,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GQAZDL7LUQ;
 				INFOPLIST_FILE = FACTorial1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Miles-tucker.FACTorial1";
+				PRODUCT_BUNDLE_IDENTIFIER = jamosa.FACTorial1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -299,6 +304,7 @@
 				FFC0749B1DAC9771008EB5EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
